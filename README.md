@@ -5,7 +5,27 @@
 - Due Date
     - 익일 새벽 6시까지 commit
     - 미리 다 풀어 놓는거 가능
+ 
+- 폴더 구조
+```bash
+    └── 📂week_1
+           ├── 📂 본인 Github ID
+           │      ├── 💾 [BOJ] 문제명.java
+           │      ├── 💾 [programmers] 문제명.py
+           │      └── 💾 페이지p.java
+           └── 📂...
+```
 
+- Commit message
+    - Add: 소스 코드 파일 추가
+    - Refactor: 소스 코드 수정
+    - Style: 소스 코드 형식(format) 수정, 변수 네이밍 수정, 주석 추가/삭제 등 (코드 동작에 영향이 없는 수정)
+    - Chore: 그 외 기타 작업
+    - 50자 이하의 간단한 제목을 사용
+        - ex) Add: 파일명.java
+        - ex) Refactor: 완전 탐색 -> 이분 탐색
+        - ex) Style: 함수명 변경
+  
 ### 02 문제
 
 - 개수
@@ -16,10 +36,9 @@
 
 ### 03 벌금
 
-<aside>
-🚨참작 없음
-
-</aside>
+```bash
+🚨 참작 없음
+```
 
 - 문제당 벌금 적용
 - 난이도별 차등 벌금 적용
