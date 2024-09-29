@@ -1,4 +1,4 @@
-# codingTest-challenge
+# 🔥codingTest-challenge
 
 ### 01 규칙
 
@@ -51,3 +51,10 @@
     | ⭐⭐⭐⭐⭐ | 1,000 |
 - 벌금 사용
     - 모두의 동의 하에 같이 쓰기
+
+### 04 참여자
+- 황세현([HwangSettong](https://github.com/HwangSettong))
+- 백승준([mint723](https://github.com/mint723))
+- 이봉욱([kiv9908](https://github.com/kiv9908))   
+- 김제인([jane-kim-279](https://github.com/jane-kim-279))
+
