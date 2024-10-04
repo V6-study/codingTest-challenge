@@ -38,3 +38,10 @@ b의 양을 xb + (xa / 2)로 만들고, a를 버리기
 100 9 77 65 39 27 45 1 80 495
 예제 출력 2 
 716.5'''
+
+n = int(input())
+drink = sorted([int(i) for i in input().split()])
+answer = drink[-1]
+for i in range(n-1):
+    answer += drink[i]/2
+print(answer)
