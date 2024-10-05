@@ -25,13 +25,13 @@ public class Main
 	    }
 	    
 	    int maxScore = Arrays.stream(scores).max().getAsInt();
-      ArrayList<Integer> result = new ArrayList<>();
-      for(int i=0; i<3; i++) {
-          if(scores[i] == maxScore) {
-              result.add(i+1);
-          }
-      }
+      	    ArrayList<Integer> result = new ArrayList<>();
+            for(int i=0; i<3; i++) {
+                if(scores[i] == maxScore) {
+                    result.add(i+1);
+                }
+            }
     
-      return result.stream().mapToInt(i->i).toArray();
+            return result.stream().mapToInt(i->i).toArray();
 	}
 }
