@@ -1,8 +1,8 @@
 def solution(N, stages):
     # 각 스테이지별 도전자 수를 먼저 계산
     challenge_count = [0] * (N + 2)
-    for i in range(1, N+1):
-        challenge_count[i] = stages.count(i) 
+    for stage in stages:
+        challenge_count[stage] += 1 
     
     total_players = len(stages)
     fail = {}
