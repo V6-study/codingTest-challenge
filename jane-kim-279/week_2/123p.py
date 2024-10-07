@@ -1,17 +1,17 @@
 def solution(N, stages):
-    fail = {}
+    # 각 스테이지별 도전자 수를 먼저 계산
+    challenge_count = [0] * (N + 2)
     for i in range(1, N+1):
-        win_cnt, challenge_cnt = 0, 0
-        for s in stages:
-            if s > i: 
-                win_cnt+=1
-                challenge_cnt+=1
-            elif s == i: 
-                challenge_cnt+=1
-        if challenge_cnt != 0:
-            fail[i] = (challenge_cnt - win_cnt) / challenge_cnt
-        else:
+        challenge_count[i] = stages.count(i) 
+    
+    total_players = len(stages)
+    fail = {}
+    for i in range(1, N + 1):
+        if total_players == 0:
             fail[i] = 0
-        
-    answer = sorted(fail, key=lambda x: (-fail[x], x))       
+        else:
+            fail[i] = challenge_count[i] / total_players
+        total_players -= challenge_count[i]
+    
+    answer = sorted(fail, key=lambda x: (-fail[x], x))
     return answer
