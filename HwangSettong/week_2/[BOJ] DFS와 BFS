@@ -1,0 +1,54 @@
+// https://www.acmicpc.net/problem/1260
+import java.io.*;
+import java.util.*;
+
+public class Main {
+    static int N;
+    static int[][] map;
+    static boolean[] visitied;
+
+    static void dfs(int current){
+        System.out.print((current+1) + " ");
+        visitied[current] = true;
+        for(int next=0; next<N; next++){
+            if(map[current][next] == 1 && !visitied[next]){
+                dfs(next);
+            }
+        }
+    }
+
+    static void bfs(int start){
+        Queue<Integer> queue = new LinkedList<>();
+        queue.add(start);
+        while(!queue.isEmpty()){
+            System.out.print((queue.peek()+1) + " ");
+            visitied[queue.peek()] = true;
+            for(int i = 0; i<N; i++){
+                if(!visitied[i] && map[queue.peek()][i] == 1 &&  !queue.contains(i)){
+                    queue.add(i);
+                }
+            }
+            queue.poll();
+        }
+
+    }
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int[] NMV = Arrays.stream(br.readLine().split(" ")).mapToInt(Integer::parseInt).toArray();
+        N = NMV[0];
+        map = new int[N][N];
+        int[] temp;
+        for(int i=0; i<NMV[1]; i++){
+            temp =  Arrays.stream(br.readLine().split(" ")).mapToInt(Integer::parseInt).toArray();
+            map[temp[0]-1][temp[1]-1] = 1;
+            map[temp[1]-1][temp[0]-1] = 1;
+        }
+
+        visitied = new boolean[N];
+        dfs(NMV[2]-1);
+        System.out.println();
+        visitied = new boolean[N];
+        bfs(NMV[2]-1);
+
+    }
+}
