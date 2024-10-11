@@ -1,5 +1,5 @@
 # 괄호회전하기
-# https://github.com/kiv9908/BE_yeogaekgi
+# https://school.programmers.co.kr/learn/courses/30/lessons/76502
 def solution(s):
     answer = 0
     for i in range(len(s)):
