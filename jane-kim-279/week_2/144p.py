@@ -1,7 +1,6 @@
 def solution(s):
     stack = []
     for i in s:
-        print(i)
         if i == "(":
             stack.append(i)
         else:
