@@ -1,3 +1,4 @@
+# https://www.acmicpc.net/problem/13164
 n, k = map(int,input().split())
 std = list(map(int,input().split()))
 diff = []
