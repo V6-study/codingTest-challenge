@@ -1,5 +1,4 @@
-package week_3.센서;
-
+// https://www.acmicpc.net/problem/2212
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -9,14 +8,13 @@ public class Main {
     public static void main(String[] args) throws IOException {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringTokenizer st = new StringTokenizer(br.readLine());
         int n = Integer.parseInt(br.readLine());
         int k = Integer.parseInt(br.readLine());
         int answer = 0;
 
         List<Integer> list = new ArrayList<>();
         List<Integer> dis = new ArrayList<>();
-        st = new StringTokenizer(br.readLine());
+        StringTokenizer st = new StringTokenizer(br.readLine());
 
         for (int i = 0; i < n; i++) {
             list.add(Integer.parseInt(st.nextToken()));
