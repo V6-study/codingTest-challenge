@@ -1,3 +1,5 @@
+// https://school.programmers.co.kr/learn/courses/30/lessons/42888
+
 import java.util.*;
 class Solution {
     public List<String> solution(String[] record) {
