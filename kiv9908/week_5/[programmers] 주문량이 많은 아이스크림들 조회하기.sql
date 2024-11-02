@@ -1,4 +1,5 @@
 -- limit 원하는 행 개수만큼 뽑기
+-- https://school.programmers.co.kr/learn/courses/30/lessons/133027
 SELECT FLAVOR
 FROM (
     SELECT F.FLAVOR AS FLAVOR, SUM(F.TOTAL_ORDER) + SUM(J.TOTAL_ORDER) AS TOTAL_SUM
