@@ -1,3 +1,4 @@
+package kiv9908.week_6;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
