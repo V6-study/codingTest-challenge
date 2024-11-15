@@ -1,0 +1,60 @@
+// https://www.acmicpc.net/problem/1043
+import java.io.*;
+import java.util.*;
+
+public class Main {
+    static int[] parent;
+    static int[] party;
+
+    static void union(int a, int b){
+        int rootA = find(a);
+        int rootB = find(b);
+        parent[rootB] = rootA;
+    }
+
+    static int find(int a){
+        if(a==parent[a]){
+            return a;
+        }
+        return parent[a] = find(parent[a]); // 경로 압축
+    }
+
+
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int[] nm = Arrays.stream(br.readLine().split(" ")).mapToInt(Integer::parseInt).toArray();
+        // parent 초기화
+        parent = new int[nm[0]+1];
+        for(int i=1;i<nm[0]+1;i++){ parent[i] = i; }
+
+        // 진실을 아는 사람들 한 집합으로 union
+        int[] know =  Arrays.stream(br.readLine().split(" ")).mapToInt(Integer::parseInt).toArray();
+        for(int i = 2; i<= know[0]; i++){
+            union(know[1], know[i]);
+        }
+
+
+        // 파티 별로 한 집합으로 union. 파티 별 가장 첫번째 인물 party에 담아주기.
+        party = new int[nm[1]];
+        for(int i = 0; i<nm[1]; i++){
+            int[] info =  Arrays.stream(br.readLine().split(" ")).mapToInt(Integer::parseInt).toArray();
+            party[i] = info[1];
+            for(int j = 2; j<= info[0]; j++){
+                union(info[1], info[j]);
+            }
+        }
+        br.close();
+
+
+        // 정답 출력
+        int answer = 0;
+        int key = know[0] == 0? 0: find(know[1]); // 정답을 아는 사람 집합의 root를 key로 설정
+        for(int p : party){
+            // 파티 집합의 root가 정답을 아는 사람 집합 root와 같으면 answer +1
+            if(find(p) != key){
+                answer++;
+            }
+        }
+        System.out.println(answer);
+    }
+}
