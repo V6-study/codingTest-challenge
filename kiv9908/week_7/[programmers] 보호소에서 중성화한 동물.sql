@@ -1,3 +1,4 @@
+-- https://school.programmers.co.kr/learn/courses/30/lessons/59045
 SELECT I.ANIMAL_ID,I.ANIMAL_TYPE, I.NAME
 FROM ANIMAL_INS I
 JOIN ANIMAL_OUTS O
