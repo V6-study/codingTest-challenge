@@ -1,3 +1,4 @@
+-- https://school.programmers.co.kr/learn/courses/30/lessons/131533
 SELECT P.PRODUCT_CODE, SUM(P.PRICE*O.SALES_AMOUNT) AS SALES
 FROM PRODUCT P
 JOIN OFFLINE_SALE O
