@@ -1,5 +1,4 @@
-package week_10.N과M5;
-
+// https://www.acmicpc.net/problem/15654
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.Arrays;
