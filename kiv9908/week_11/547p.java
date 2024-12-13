@@ -1,20 +1,21 @@
 import java.util.*;
-
 class Solution {
     public int[] solution(int[] array, int[][] commands) {
-        List<Integer> answer = new ArrayList<>();
-
-        for (int i = 0; i < commands.length; i++) {
-            List<Integer> sublist = new ArrayList<>();
-
-            for(int j = commands[i][0]-1; j < commands[i][1]; j++) {
-                sublist.add(array[j]);
+        int[] answer = new int[commands.length];
+        int idx = 0;
+        for(int[] command : commands){
+            List<Integer> cut = new ArrayList<>();
+            int i = command[0]-1;
+            int j = command[1]-1;
+            int k = command[2]-1;
+            for(int start = i ; start <= j;start++){
+                cut.add(array[start]); 
             }
-            Collections.sort(sublist);
-            answer.add(sublist.get(commands[i][2]-1));
-
+            Collections.sort(cut);
+            answer[idx]=cut.get(k);
+            idx++;
+            
         }
-
-        return answer.stream().mapToInt(i->i).toArray();
+        return answer;
     }
 }
