@@ -1,5 +1,4 @@
-package week_11.좌표정렬하기;
-
+// https://www.acmicpc.net/problem/11650
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
