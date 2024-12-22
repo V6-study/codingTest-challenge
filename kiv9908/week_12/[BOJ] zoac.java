@@ -1,4 +1,4 @@
-package week_12.zoac3;
+// https://www.acmicpc.net/problem/20436
 
 import java.io.BufferedReader;
 import java.io.IOException;
