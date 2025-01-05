@@ -1,5 +1,4 @@
-package kiv9908.week_15;
-
+// https://school.programmers.co.kr/learn/courses/30/lessons/43105
 public class 637p {
 
     public int solution(int[][] triangle){
