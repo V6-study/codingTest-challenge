@@ -1,4 +1,4 @@
-package week_15.경고;
+// https://www.acmicpc.net/problem/3029
 
 import java.io.BufferedReader;
 import java.io.IOException;
