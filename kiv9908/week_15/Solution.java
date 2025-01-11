@@ -1,3 +1,5 @@
+// https://school.programmers.co.kr/learn/courses/30/lessons/42897
+
 public class Solution {
 
     public int solution(int[] money) {
