@@ -8,6 +8,7 @@ public class Solution {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int n = Integer.parseInt(br.readLine());
         int[][] arr = new int[n][n];
+        
         int num = 1;
 
         int startRow = 0, endRow = n-1, startCol = 0, endCol = n-1;
