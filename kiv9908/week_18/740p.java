@@ -2,7 +2,6 @@ class Solution {
 
     public static int solution(int[][] board, int[][] skill) {
         int[][] sum = new int[board.length + 1][board[0].length + 1];
-
         for (int[] s : skill) {
             int degree = s[5] * (s[0] == 1 ? -1 : 1);
             sum[s[1]][s[2]] += degree;
